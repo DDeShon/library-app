@@ -41,4 +41,20 @@ router.post("/", async (req, res) => {
   }
 });
 
+router.get("/:id", (req, res) => {
+  res.send("Show Author " + req.params.id);
+});
+
+router.get("/:id/edit", (req, res) => {
+  res.send("Edit Author " + req.params.id);
+});
+
+router.put("/:id", (req, res) => {
+  res.send("Update Author " + req.params.id);
+});
+
+router.delete("/:id", (req, res) => {
+  res.send("Delete Author " + req.params.id);
+});
+
 module.exports = router;
