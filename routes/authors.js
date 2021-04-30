@@ -1,5 +1,6 @@
 const express = require("express");
 const Author = require("../models/author");
+const Book = require("../models/book");
 const router = express.Router();
 
 // All Authors Route
@@ -40,10 +41,21 @@ router.post("/", async (req, res) => {
   }
 });
 
-router.get("/:id", (req, res) => {
-  res.send("Show Author " + req.params.id);
+// Show Author Page Route
+router.get("/:id", async (req, res) => {
+  try {
+    const author = await Author.findById(req.params.id);
+    const books = await Book.find({ author: author.id }).limit(6).exec();
+    res.render("authors/show", {
+      author: author,
+      booksByAuthor: books,
+    });
+  } catch {
+    res.redirect("/");
+  }
 });
 
+// Edit Author Route
 router.get("/:id/edit", async (req, res) => {
   try {
     const author = await Author.findById(req.params.id);
@@ -53,6 +65,7 @@ router.get("/:id/edit", async (req, res) => {
   }
 });
 
+// Update Author Route
 router.put("/:id", async (req, res) => {
   let author;
   try {
@@ -72,8 +85,20 @@ router.put("/:id", async (req, res) => {
   }
 });
 
-router.delete("/:id", (req, res) => {
-  res.send("Delete Author " + req.params.id);
+// Delete Author Route
+router.delete("/:id", async (req, res) => {
+  let author;
+  try {
+    author = await Author.findById(req.params.id);
+    await author.remove();
+    res.redirect(`/authors`);
+  } catch {
+    if (author == null) {
+      res.redirect("/");
+    } else {
+      res.redirect(`/authors/${author.id}`);
+    }
+  }
 });
 
 module.exports = router;
