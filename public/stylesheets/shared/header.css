@@ -1,0 +1,33 @@
+.header-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.header-nav ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.header-nav li {
+  padding: 1rem;
+  list-style: none;
+}
+
+.header-nav a {
+  color: var(--color-text-light);
+  font-weight: var(--nav-link-font-wieght);
+  text-decoration: none;
+}
+
+.header-nav a:hover {
+  color: white;
+}
+
+.header-title {
+  font-size: var(--nav-title-font-size);
+  font-weight: var(--nav-title-font-weight);
+}

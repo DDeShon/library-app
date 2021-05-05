@@ -1,10 +1,17 @@
 @import "shared/variables.css";
 @import "shared/fonts.css";
+@import "shared/header.css";
 
 :root {
   font-family: "Nova Round";
   font-size: 16px;
   color: var(--color-text-light);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
@@ -23,4 +30,9 @@ body {
 
 .container-inner {
   margin: 0 2rem;
+}
+
+.page-header {
+  font-size: 2rem;
+  font-weight: 500;
 }
