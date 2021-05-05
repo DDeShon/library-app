@@ -5,7 +5,7 @@
     var(--color-base-hue) - var(--color-danger-hue-offset)
   );
   --color-background-dark: hsl(var(--color-base-hue), 100%, 10%);
-  --color-background-light: hsl(var(--color-base-hue), 100%, 35%);
+  --color-background-light: hsl(var(--color-base-hue), 100%, 45%);
   --color-text-light: hsl(var(--color-base-hue), 100%, 85%);
   --color-btn-primary-text: hsl(var(--color-base-hue), 100%, 20%);
   --color-btn-danger-text: black;
@@ -17,4 +17,8 @@
   --nav-title-font-size: 3rem;
   --nav-title-font-weight: bold;
   --nav-link-font-wieght: 300;
+  --form-label-font-size: 1.2rem;
+  --form-input-border-color: hsl(var(--color-base-hue), 100%, 60%);
+  --form-input-border-color-light: hsl(var(--color-base-hue), 100%, 80%);
+  --form-input-background-color: hsl(var(--color-base-hue), 100%, 30%);
 }
