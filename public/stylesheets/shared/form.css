@@ -19,6 +19,10 @@
   flex-grow: 0;
 }
 
+.form-row-end {
+  justify-content: flex-end;
+}
+
 .form-item > label {
   font-size: var(--form-label-font-size);
   margin-bottom: 0.25rem;
@@ -41,11 +45,31 @@
 }
 
 .form-item textarea {
-  height: 5rem;
+  height: 100%;
+  resize: none;
+}
+
+.form-item select option {
+  background-color: black;
 }
 
 .form-item input:focus,
 .form-item select:focus,
 .form-item textarea:focus {
   border-color: var(--form-input-border-color-light);
+}
+
+.filepond--root {
+  font-family: "Nova Round";
+  margin-bottom: 0;
+}
+
+.filepond--panel-root {
+  background-color: var(--form-input-background-color);
+  border: 1px solid var(--form-input-border-color);
+}
+
+.filepond--drop-label {
+  color: var(--color-text-light);
+  font-size: inherit;
 }
