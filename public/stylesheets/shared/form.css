@@ -40,6 +40,10 @@
   outline: none;
 }
 
+.form-item textarea {
+  height: 5rem;
+}
+
 .form-item input:focus,
 .form-item select:focus,
 .form-item textarea:focus {
