@@ -1,9 +1,6 @@
 :root {
   --color-base-hue: 261;
-  --color-danger-hue-offset: 180;
-  --color-danger-hue: calc(
-    var(--color-base-hue) - var(--color-danger-hue-offset)
-  );
+  --color-danger-hue: 0;
   --color-background-dark: hsl(var(--color-base-hue), 100%, 10%);
   --color-background-light: hsl(var(--color-base-hue), 100%, 45%);
   --color-text-light: hsl(var(--color-base-hue), 100%, 85%);
@@ -12,7 +9,7 @@
   --color-btn-border: black;
   --color-btn-primary-background: hsl(var(--color-base-hue), 100%, 85%);
   --color-btn-primary-background-dark: hsl(var(--color-base-hue), 100%, 65%);
-  --color-btn-danger-background: hsl(var(--color-danger-hue), 100%, 85%);
+  --color-btn-danger-background: hsl(var(--color-danger-hue), 100%, 50%);
   --color-btn-danger-background-dark: hsl(var(--color-danger-hue), 100%, 65%);
   --nav-title-font-size: 3rem;
   --nav-title-font-weight: bold;
