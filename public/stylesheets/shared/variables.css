@@ -21,4 +21,8 @@
   --form-input-border-color: hsl(var(--color-base-hue), 100%, 60%);
   --form-input-border-color-light: hsl(var(--color-base-hue), 100%, 80%);
   --form-input-background-color: hsl(var(--color-base-hue), 100%, 30%);
+
+  --book-cover-width: 200px;
+  --book-cover-width-large: 325px;
+  --book-cover-aspect-ratio: 0.75;
 }

@@ -2,7 +2,7 @@
 <form action="/authors" method="GET">
   <div class="form-row">
     <div class="form-item">
-      <label for="name">Name</label>
+      <label >Name</label>
       <input type="text" name="name" value="<%= searchOptions.name %>" />
     </div>
   </div>
@@ -12,11 +12,13 @@
 </form>
 <br />
 <% authors.forEach(author => { %>
-  <div><%= author.name %></div>
-  <div class="form-row form-row-end btn-row">
-    <a class="btn btn-primary" href="/authors/<%= author.id %>">View</a>
-    <a class="btn btn-primary" href="/authors/<%= author.id %>/edit">Edit</a>
-    <%- include('../partials/deleteForm', 
-                { url: `/authors/${author.id}`}) %>
+  <div class="author-row">
+    <div class="author-name"><%= author.name %></div>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="/authors/<%= author.id %>">View</a>
+      <a class="btn btn-primary" href="/authors/<%= author.id %>/edit">Edit</a>
+      <%- include('../partials/deleteForm', 
+                  { url: `/authors/${author.id}`}) %>
+    </div>
   </div>
 <% }) %>
