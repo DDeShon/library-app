@@ -9,7 +9,7 @@
   --color-btn-border: black;
   --color-btn-primary-background: hsl(var(--color-base-hue), 100%, 85%);
   --color-btn-primary-background-dark: hsl(var(--color-base-hue), 100%, 65%);
-  --color-btn-danger-background: hsl(var(--color-danger-hue), 100%, 55%);
+  --color-btn-danger-background: hsl(var(--color-danger-hue), 100%, 65%);
   --color-btn-danger-background-dark: hsl(var(--color-danger-hue), 100%, 35%);
   --nav-title-font-size: 3rem;
   --nav-title-font-weight: bold;
