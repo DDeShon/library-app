@@ -13,7 +13,7 @@
 <br />
 <% authors.forEach(author => { %>
   <div><%= author.name %></div>
-  <div class="btn-row">
+  <div class="form-row form-row-end btn-row">
     <a class="btn btn-primary" href="/authors/<%= author.id %>">View</a>
     <a class="btn btn-primary" href="/authors/<%= author.id %>/edit">Edit</a>
     <%- include('../partials/deleteForm', 
